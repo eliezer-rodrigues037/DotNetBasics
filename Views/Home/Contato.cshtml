@@ -1,0 +1,56 @@
+﻿@{
+    ViewData["Title"] = "Informações de contato";
+}
+<h1>@ViewData["Title"]</h1>
+
+
+<section class="resume-section" id="about">
+    <div class="resume-section-content">
+        <h1 class="mb-0">
+            Eliezer Rodrigues Ribeiro
+        </h1>
+        <div class="subheading mb-5">
+            Sorocaba, SP <i class="fa-brands fa-whatsapp"></i> (11) 99593-6984·
+            <a href="mailto:name@email.com">eliezer_gt.02@hotmail.com</a>
+        </div>
+        <p class="lead mb-5">Estudante de engenharia da computação, conclusão prevista para dezmbro de 2022. Interesses nas áreas de pesquisa científica e ciência e análise de dados e desenvolvimento de aplicações web.</p>
+        <div class="social-icons">
+            <a class="social-icon" href="https://www.linkedin.com/in/eliezer-rodrigues-ribeiro-820190101/"> <i class="fa-brands fa-linkedin-in"></i> </a>
+            <a class="social-icon" href="https://github.com/eliezer-rodrigues037"> <i class="fa-brands fa-github"></i> </a>
+        </div>
+    </div>
+</section>
+
+<style>
+section.resume-section {
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    max-width: 75rem;
+    }
+section.resume-section .resume-section-content {
+  width: 100%;
+}
+
+.social-icons .social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 3.5rem;
+  width: 3.5rem;
+  background-color: #495057;
+  color: #fff;
+  border-radius: 100%;
+  font-size: 1.5rem;
+  margin-right: 1.5rem;
+}
+.social-icons .social-icon:last-child {
+  margin-right: 0;
+}
+.social-icons .social-icon:hover {
+  background-color: #bd5d38;
+}
+</style>

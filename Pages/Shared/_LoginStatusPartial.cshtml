@@ -1,0 +1,17 @@
+﻿@if(User.Identity.IsAuthenticated)
+{
+     <form method="post" class="form-line fw-bold text-light" asp-page="/Autenticacao/Logout">
+       Bem vindo @User.Identity.Name.Split(" ")[0]!
+    <button type="submit" class="btn btn-primary btn-login text-uppercase fw-bold ms-3">Sair</button>
+    </form>
+}
+else
+{
+    <form method="get" asp-page="/Login">
+        <button type="submit" class="btn btn-primary btn-login text-uppercase fw-bold" asp-page="/Autenticacao/Cadastrar" >Cadastrar</button>
+        <button type="submit" class="btn btn-primary btn-login text-uppercase fw-bold" asp-page="/Autenticacao/Login" >Logar</button>
+    </form>
+    
+    
+    
+}

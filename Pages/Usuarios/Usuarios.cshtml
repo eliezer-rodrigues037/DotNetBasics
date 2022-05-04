@@ -1,0 +1,43 @@
+﻿@page
+@model DotNetBasics.Pages.UsuariosModel
+@{
+}
+
+@if (Model.Usuarios.Any())
+{
+    <table class="table table-hover table-bordered">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nome</th>
+                <th>Usuario</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var usuario in Model.Usuarios)
+            {
+                <tr>
+                    <td>@usuario.Id</td>
+                    <td>@usuario.Nome</td>
+                    <td>@usuario.Usuario</td>
+                    <td>
+                        <a asp-page="/Usuarios/editar" asp-route-Id="@usuario.Id" class="btn btn-warning">
+                            Editar
+                        </a>
+                        <a asp-page="/Usuarios/editar" asp-page-handler="Apagar" asp-route-Id="@usuario.Id" class="btn btn-danger" data-ajax="true" 
+        data-ajax-success="Sucesso" data-ajax-failure="Falha">
+                            Remover
+                        </a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    
+
+}
+else
+{
+    <h2 class="text-center">Nenhum usuario encontrado.</h2>
+}
